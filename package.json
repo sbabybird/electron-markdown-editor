@@ -1,5 +1,5 @@
 {
-  "name": "vite-electron-builder",
+  "name": "electron-markdown-editor",
   "private": true,
   "engines": {
     "node": ">=v14.16",
@@ -13,7 +13,7 @@
     "pretest": "npm run build",
     "test": "node tests/app.spec.js",
     "watch": "node scripts/watch.js",
-    "lint": "eslint . --ext js,ts,vue",
+    "lint": "eslint . --ext js,ts,tsx",
     "typecheck-main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck-preload": "tsc --noEmit -p packages/preload/tsconfig.json",
     "typecheck-renderer": "tsc --noEmit -p packages/renderer/tsconfig.json",
@@ -27,7 +27,7 @@
     "pre-push": "npm run typecheck"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --cache --fix"
+    "*.{js,ts,tsx}": "eslint --cache --fix"
   },
   "devDependencies": {
     "@types/electron-devtools-installer": "2.2.0",
